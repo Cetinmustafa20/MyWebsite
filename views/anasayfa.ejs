@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taşınabilir Mangal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background-image: url('/images/mangal-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      margin-bottom: 50px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      animation: fadeInDown 2s;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      animation: fadeInUp 2s;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .product-section {
+      padding: 50px 0;
+    }
+    .product-item {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .product-item:hover {
+      transform: scale(1.05);
+    }
+    .product-item img {
+      width: 100%;
+      transition: transform 0.3s;
+    }
+    .product-item:hover img {
+      transform: rotateY(180deg);
+    }
+    .product-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .product-item:hover .product-info {
+      opacity: 1;
+    }
+    .product-info h3 {
+      font-size: 1.5rem;
+    }
+    .product-info p {
+      font-size: 1rem;
+    }
+    .feature-section {
+      background-color: #f8f9fa;
+      padding: 50px 0;
+    }
+    .feature-item {
+      padding: 20px;
+      text-align: center;
+    }
+    .testimonial-section {
+      padding: 50px 0;
+      background: #343a40;
+      color: white;
+    }
+    .testimonial-item {
+      padding: 20px;
+      text-align: center;
+    }
+    .testimonial-item p {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">MangalShop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#product">Ürün</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">İletişim</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="text-center">
+      <h1>Taşınabilir Mangal</h1>
+      <p>Kolay taşınabilir, demirden yapılmış kaliteli mangalınızı hemen satın alın!</p>
+      <a href="#product" class="btn btn-primary btn-lg">Ürünü İncele</a>
+    </div>
+  </header>
+
+  <!-- Feature Section -->
+  <section class="feature-section container text-center">
+    <div class="row">
+      <div class="col-md-4 feature-item">
+        <h3>Kolay Taşınabilir</h3>
+        <p>Taşınabilir tasarımı sayesinde her yerde mangal keyfini yaşayın.</p>
+      </div>
+      <div class="col-md-4 feature-item">
+        <h3>Yüksek Kalite</h3>
+        <p>Demirden yapılmış sağlam yapısı ile uzun ömürlü kullanım.</p>
+      </div>
+      <div class="col-md-4 feature-item">
+        <h3>Uygun Fiyat</h3>
+        <p>Kaliteli mangal keyfini uygun fiyatlarla yaşayın.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section id="product" class="product-section container text-center">
+    <h2 class="mb-5">Ürün Bilgileri</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="product-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvn2RZI4Ck4HeqnvYQfCJJ44yFPvLBUWKO5g&s" alt="Taşınabilir Mangal">
+          <div class="product-info">
+            <h3>Demirden Taşınabilir Mangal</h3>
+            <p>Yüksek kaliteli demirden yapılmış, hafif ve taşınabilir. Bu mangal ile mükemmel ızgaralar yapabilirsiniz.</p>
+            <p>Fiyat: 299 TL</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="product-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvn2RZI4Ck4HeqnvYQfCJJ44yFPvLBUWKO5g&s" alt="Taşınabilir Mangal">
+          <div class="product-info">
+            <h3>Dayanıklı Yapı</h3>
+            <p>Sağlam demir konstrüksiyonu sayesinde uzun ömürlü kullanım sağlar.</p>
+            <p>Fiyat: 299 TL</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="product-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvn2RZI4Ck4HeqnvYQfCJJ44yFPvLBUWKO5g&s" alt="Taşınabilir Mangal">
+          <div class="product-info">
+            <h3>Kompakt ve Taşınabilir</h3>
+            <p>Kolayca taşınabilir ve her yerde kullanabilirsiniz.</p>
+            <p>Fiyat: 299 TL</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="/mangal" class="btn btn-success btn-lg mt-5">Satın Al</a>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section container text-center">
+    <h2 class="mb-5">Müşteri Yorumları</h2>
+    <div class="row">
+      <div class="col-md-4 testimonial-item">
+        <p>"Bu mangal harika! Çok kolay taşınabiliyor ve her yerde kullanabiliyoruz."</p>
+        <p>- Ahmet Y.</p>
+      </div>
+      <div class="col-md-4 testimonial-item">
+        <p>"Yüksek kaliteli ve dayanıklı. Kesinlikle tavsiye ederim!"</p>
+        <p>- Fatma K.</p>
+      </div>
+      <div class="col-md-4 testimonial-item">
+        <p>"Fiyatı çok uygun ve çok kullanışlı bir ürün."</p>
+        <p>- Mehmet A.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 MangalShop. Tüm hakları saklıdır.</p>
+      <a href="/mangal" class="btn btn-outline-light">Satış İşlemleri İçin Tıklayın</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
